@@ -1,87 +1,159 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Share+Tech+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Share+Tech+Mono&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #1a1a1a;
-    color: #e0e0e0;
-    font-family: 'Roboto Mono', 'Share Tech Mono', monospace;
-    margin: 0;
-    padding: 20px;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  font-family: "Roboto Mono", "Share Tech Mono", monospace;
+  margin: 0;
+  padding: 20px;
+}
+/* ESTILOS DA LOJA (FLEXBOX) */
+
+#loja {
+  /* Ativa o Flexbox para organizar os botões */
+  display: flex;
+  flex-direction: column; /* Empilha os botões um em cima do outro */
+  gap: 15px; /* Cria um espaço uniforme entre os botões */
+  margin-top: 30px;
+  max-width: 350px; /* Limita a largura para parecer um painel lateral */
 }
 
-h1{
-    display: flex;
-    justify-content: center;
+/* Estilo geral para os dois botões de upgrade */
+#btnUranio,
+#btnSupercondutor,
+#btnLaser {
+  background-color: #2d3748; /* Fundo cinza azulado escuro */
+  color: #63b3ed; /* Texto em azul "energia" */
+  border: 2px solid #4a5568; /* Borda sutil */
+  border-radius: 8px; /* Bordas levemente arredondadas */
+  padding: 15px;
+  font-family: inherit; /* Herda a sua fonte Share Tech Mono/Roboto Mono */
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Faz a animação de hover ser suave */
+
+  /* Usando flexbox DENTRO do botão para separar título e custo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Efeito visual quando o mouse passa por cima (Hover) */
+#btnUranio:hover,
+#btnSupercondutor:hover,
+#btnLaser:hover {
+  border-color: #63b3ed; /* Borda acende em azul */
+  background-color: #1a365d; /* Fundo fica um pouco mais azulado */
+  box-shadow: 0 0 12px rgba(99, 179, 237, 0.4); /* Efeito de brilho (neon) */
+  transform: translateY(-2px); /* O botão "levanta" levemente */
+}
+
+/* Destacando apenas o número do custo dentro dos botões */
+#custoUranio,
+#custoSupercondutor,
+#custoLaser {
+  color: #f6e05e; /* Amarelo/Dourado para destacar que é "dinheiro/pontos" */
+  font-weight: bold;
+  font-size: 1.2em;
+}
+h1 {
+  display: flex;
+  justify-content: center;
 }
 
 .layout {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .reator {
-    width: 200px;
-    height: 200px;
-    border: none;
-    outline: none;
-    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  width: 200px;
+  height: 200px;
+  border: none;
+  outline: none;
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    background: #22262b;
-    cursor: pointer;
-    color: #e0e0e0;
-    font-family: "Share Tech Mono", monospace;
+  background: #22262b;
+  cursor: pointer;
+  color: #e0e0e0;
+  font-family: "Share Tech Mono", monospace;
 
-    transition: transform 0.05s ease, background-color 0.2s ease;
-
+  transition:
+    transform 0.05s ease,
+    background-color 0.2s ease;
 }
 
-.reator:active{
-    background-color: #1a1d21;
+.reator:active {
+  background-color: #1a1d21;
 }
 
 .reator-borda {
-    display: inline-flex;
-    padding: 2px;
-    background: #5ee7ff;
-    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-    transition: filter 0.1s ease, transform 0.05s ease;
-    margin: 30px;
+  display: inline-flex;
+  padding: 2px;
+  background: #5ee7ff;
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+  transition:
+    filter 0.1s ease,
+    transform 0.05s ease;
+  margin: 30px;
 }
 
 .reator-borda:has(.reator:hover) {
-    filter: drop-shadow(0 0 15px #5ee7ff);
-    background: #a1f3ff;
+  filter: drop-shadow(0 0 15px #5ee7ff);
+  background: #a1f3ff;
 }
 
 .reator-borda:has(.reator:active) {
-    transform: scale(0.96);
-    filter: drop-shadow(0 0 50px #5ee7ff);
+  transform: scale(0.96);
+  filter: drop-shadow(0 0 50px #5ee7ff);
 }
 
 .reator p {
-    font-size: 0.7rem;
-    letter-spacing: 0.1rem;
-    margin-bottom: 8px;
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 8px;
 }
 
 .reator .valor-pontuacao {
-    font-size: 2rem;
-    color: #5ee7ff;
-    letter-spacing: 1px;
+  font-size: 2rem;
+  color: #5ee7ff;
+  letter-spacing: 1px;
 
-    text-shadow: 0 0 8px rgba(0, 229, 255, 0.6), 0 0 20px rgba(0, 229, 255, 0.3);
-    margin-bottom: 8px;
+  text-shadow:
+    0 0 8px rgba(0, 229, 255, 0.6),
+    0 0 20px rgba(0, 229, 255, 0.3);
+  margin-bottom: 8px;
 }
