@@ -1,39 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jogo de Clique</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <h1>Jogo de Clique</h1>
 
-    <div class ="layout">
-        <div id="status">
-            <p>Pontuação: <span class="valor-pontuacao">0</span></p>
-            <p>Valor por clique: <span id="valorclique">1</span></p>
-            <p>Upgrades comprados: <span id="upgrades">0</span></p>
-        </div>
+    <div class="layout">
+      <div id="status">
+        <p>Pontuação: <span class="valor-pontuacao">0</span></p>
+        <p>Valor por clique: <span id="valorclique">1</span></p>
+        <p>Upgrades comprados: <span id="upgrades">0</span></p>
+        <p>Energia por segundo: <span id="valorPorSegundo">0</span></p>
+      </div>
 
-        
-        <div class="reator-borda">
-            <button class ="reator" id ="botaoClique">
-                <p>REATOR NODE</p>
-                <span class="valor-pontuacao">0</span>
-                <p>PODER DO CLIQUE</p>
-            </button>
-        </div>
-        
-        <div id="loja">
-            <button id="botaoupgrade">Comprar Upgrade (Custo: <span id="custoupgrade">10</span>)</button>
-        </div>
+      <div class="reator-borda">
+        <button class="reator" id="botaoClique">
+          <p>REATOR NODE</p>
+          <span class="valor-pontuacao">0</span>
+          <p>PODER DO CLIQUE</p>
+        </button>
+      </div>
+
+      <div id="loja">
+        <button id="btnUranio">
+          Haste de Urânio (+1/clique) <br />
+          Custo: <span id="custoUranio">10</span>
+        </button>
+
+        <button id="btnSupercondutor">
+          Fiação Supercondutor (+2/seg) <br />
+          Custo: <span id="custoSupercondutor">50</span>
+        </button>
+
+        <button id="btnLaser">
+          Calibração de Foco do Laser (+10/seg) <br />
+          Custo: <span id="custoLaser">500</span>
+        </button>
+      </div>
     </div>
 
     <p id="mensagem"></p>
 
     <script src="script.js"></script>
-    
-</body>
+  </body>
 </html>
