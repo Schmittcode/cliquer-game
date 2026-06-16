@@ -15,28 +15,67 @@ body {
 }
 /* ESTILOS DA LOJA (FLEXBOX) */
 
+/*  ESTILOS DA LOJA (FLEXBOX E ROLAGEM)  */
+
 #loja {
-  /* Ativa o Flexbox para organizar os botões */
   display: flex;
-  flex-direction: column; /* Empilha os botões um em cima do outro */
-  gap: 15px; /* Cria um espaço uniforme entre os botões */
+  flex-direction: column;
+  gap: 15px;
   margin-top: 30px;
-  max-width: 350px; /* Limita a largura para parecer um painel lateral */
+  max-width: 350px;
+
+  /*  NOVAS REGRAS DE ROLAGEM AQUI  */
+  max-height: calc(100vh - 121px);
+  overflow-y: auto;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
 }
 
-/* Estilo geral para os dois botões de upgrade */
+/*  ESTILIZANDO A BARRA DE ROLAGEM (Tema Sci-Fi)  */
+
+/* Largura da barra inteira */
+#loja::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Fundo (trilha) por onde a barra desliza */
+#loja::-webkit-scrollbar-track {
+  background: #1a202c;
+  border-radius: 4px;
+}
+
+/* A barrinha móvel em si */
+#loja::-webkit-scrollbar-thumb {
+  background: #4a5568;
+  border-radius: 4px;
+}
+
+/* Quando o mouse passa por cima da barrinha móvel */
+#loja::-webkit-scrollbar-thumb:hover {
+  background: #63b3ed;
+}
+
+/* Estilo geral para os botões de upgrade */
 #btnUranio,
 #btnSupercondutor,
-#btnLaser {
-  background-color: #2d3748; /* Fundo cinza azulado escuro */
-  color: #63b3ed; /* Texto em azul "energia" */
-  border: 2px solid #4a5568; /* Borda sutil */
-  border-radius: 8px; /* Bordas levemente arredondadas */
+#btnLaser,
+#btnResfriamento,
+#btnBobina,
+#btnCriogenico,
+#btnProcessador,
+#btnInjetor,
+#btnQuantico {
+  background-color: #2d3748;
+  color: #63b3ed;
+  border: 2px solid #4a5568;
+  border-radius: 8px;
   padding: 15px;
-  font-family: inherit; /* Herda a sua fonte Share Tech Mono/Roboto Mono */
+  font-family: inherit;
   font-size: 16px;
   cursor: pointer;
-  transition: all 0.3s ease; /* Faz a animação de hover ser suave */
+  transition: all 0.3s ease;
 
   /* Usando flexbox DENTRO do botão para separar título e custo */
   display: flex;
@@ -48,7 +87,13 @@ body {
 /* Efeito visual quando o mouse passa por cima (Hover) */
 #btnUranio:hover,
 #btnSupercondutor:hover,
-#btnLaser:hover {
+#btnLaser:hover,
+#btnResfriamento:hover,
+#btnBobina:hover,
+#btnCriogenico:hover,
+#btnProcessador:hover,
+#btnInjetor:hover,
+#btnQuantico:hover {
   border-color: #63b3ed; /* Borda acende em azul */
   background-color: #1a365d; /* Fundo fica um pouco mais azulado */
   box-shadow: 0 0 12px rgba(99, 179, 237, 0.4); /* Efeito de brilho (neon) */
@@ -58,7 +103,13 @@ body {
 /* Destacando apenas o número do custo dentro dos botões */
 #custoUranio,
 #custoSupercondutor,
-#custoLaser {
+#custoLaser,
+#custoResfriamento,
+#custoBobina,
+#custoCriogenico,
+#custoProcessador,
+#custoInjetor,
+#custoQuantico {
   color: #f6e05e; /* Amarelo/Dourado para destacar que é "dinheiro/pontos" */
   font-weight: bold;
   font-size: 1.2em;
