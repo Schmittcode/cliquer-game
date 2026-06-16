@@ -10,23 +10,28 @@
 
     <h1>Jogo de Clique</h1>
 
-    <div id="status">
-        <p>Pontuação: <span class="valor-pontuacao">0</span></p>
-        <p>Valor por clique: <span id="valorclique">1</span></p>
-        <p>Upgrades comprados: <span id="upgrades">0</span></p>
+    <div class ="layout">
+        <div id="status">
+            <p>Pontuação: <span class="valor-pontuacao">0</span></p>
+            <p>Valor por clique: <span id="valorclique">1</span></p>
+            <p>Upgrades comprados: <span id="upgrades">0</span></p>
+        </div>
+
+        
+        <div class="reator-borda">
+            <button class ="reator" id ="botaoClique">
+                <p>REATOR NODE</p>
+                <span class="valor-pontuacao">0</span>
+                <p>PODER DO CLIQUE</p>
+            </button>
+        </div>
+        
+        <div id="loja">
+            <button id="botaoupgrade">Comprar Upgrade (Custo: <span id="custoupgrade">10</span>)</button>
+        </div>
     </div>
 
     <p id="mensagem"></p>
-
-    <div class ="reator">
-        <p>REATOR NODE</p>
-        <span class="valor-pontuacao">0</span>
-        <button id="botaoClique">Clique Aqui!</button>
-    </div>
-    
-    <div id="loja">
-        <button id="botaoupgrade">Comprar Upgrade (Custo: <span id="custoupgrade">10</span>)</button>
-    </div>
 
     <script src="script.js"></script>
     
