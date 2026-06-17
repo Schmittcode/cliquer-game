@@ -13,9 +13,8 @@ body {
   margin: 0;
   padding: 20px;
 }
-/* ESTILOS DA LOJA (FLEXBOX) */
 
-/*  ESTILOS DA LOJA (FLEXBOX E ROLAGEM)  */
+/*  ESTILOS DA LOJA */
 
 #loja {
   display: flex;
@@ -31,6 +30,13 @@ body {
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 5px;
+
+  /* FUNDO DOS UPGRADES */
+  background-color: #111418; /* Uma cor de fundo levemente mais escura que a página */
+  border: 2px solid #5ee7ff; /* A mesma borda azul neon do seu reator */
+  border-radius: 12px; /* Deixa as pontas da caixa arredondadas */
+  padding: 20px; /* Cria um espaço entre a borda da caixa e os botões de dentro */
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.1); /* Um brilho suave ao redor da caixa inteira */
 }
 
 /*  ESTILIZANDO A BARRA DE ROLAGEM (Tema Sci-Fi)  */
