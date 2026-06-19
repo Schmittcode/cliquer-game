@@ -1,0 +1,16 @@
+.presenteFlutuante {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 999;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+/* Animação Flutuante */
+
+@keyframes flutuar {
+    0% { transform: translateY(0px);}
+    50% {transform: translateY(-20px);}
+    100% {transform: translateY(0px);}
+}

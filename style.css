@@ -34,7 +34,7 @@ body {
   /* FUNDO DOS UPGRADES */
   background-color: #111418; /* Uma cor de fundo levemente mais escura que a página */
   border: 2px solid #5ee7ff; /* A mesma borda azul neon do seu reator */
-  border-radius: 12px; /* Deixa as pontas da caixa arredondadas */
+  border-radius: 4px; /* Deixa as pontas da caixa arredondadas */
   padding: 20px; /* Cria um espaço entre a borda da caixa e os botões de dentro */
   box-shadow: 0 0 15px rgba(0, 229, 255, 0.1); /* Um brilho suave ao redor da caixa inteira */
 }
