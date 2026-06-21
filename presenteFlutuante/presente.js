@@ -4,6 +4,8 @@ function criarPresente() {
     presente.src = "assets/presente.png";
     presente.classList.add("presenteFlutuante");
     const lado = Math.floor(Math.random() * 4);
+    const tempoNaTela = (Math.random() * 5000) + 10000;
+    const indicadorBuff = document.getElementById("indicadorBuff")
 
     if(lado === 0) { //Esquerda
         presente.style.left = "0px";
@@ -21,6 +23,25 @@ function criarPresente() {
 
     document.body.appendChild(presente);
     moverPresente(presente, lado);
+
+    presente.addEventListener("click", function() {
+        presente.remove();
+
+        const valorOriginal = valorPorClique; //guarda o valor atual antes de dobrar
+        valorPorClique *=2; //dobra
+        valorPorCliqueEl.textContent = valorPorClique;
+        indicadorBuff.textContent = "x2";
+
+        setTimeout(function() {
+            valorPorClique = valorOriginal;
+            valorPorCliqueEl.textContent = valorPorClique;
+            indicadorBuff.textContent = "";
+        },30000);
+    })
+
+    setTimeout(function() {
+        presente.remove();
+    }, tempoNaTela)
 }
 
 function moverPresente(presente, lado) {
@@ -81,7 +102,18 @@ function moverPresente(presente, lado) {
             }
         }
     }
-    requestAnimationFrame(animar);
-}
+     requestAnimationFrame(animar);
 
-    
+}
+    function agendarPresente() { 
+        criarPresente(); // 1. Spawna o presente atual na tela
+        const proximoTempo = (Math.random() * 120000) + 60000; // 2. Sorteia o tempo para o PRÓXIMO presente (entre 1 e 3 minutos) 
+
+        setTimeout(agendarPresente, proximoTempo); // 3. Deixa agendado o próximo spawn
+        }
+        // O jogo inicia, espera 5 minutos em silêncio, e joga o primeiro presente na tela
+        const cincoMinutos = 300000;
+        setTimeout(agendarPresente, cincoMinutos);
+       
+
+
