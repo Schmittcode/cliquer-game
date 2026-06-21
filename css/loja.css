@@ -1,0 +1,76 @@
+/*  ESTILOS DA LOJA */
+#loja {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+  max-width: 350px;
+  max-height: calc(100vh - 121px);
+  overflow-y: auto;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  background-color: #111418;
+  border: 2px solid #5ee7ff;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.1);
+}
+
+/*BARRA DE ROLAGEM
+/* Largura da barra inteira */
+#loja::-webkit-scrollbar {
+  width: 8px;
+}
+/* Fundo (trilha) por onde a barra desliza */
+#loja::-webkit-scrollbar-track {
+  background: #1a202c;
+  border-radius: 4px;
+}
+/* A barrinha móvel em si */
+#loja::-webkit-scrollbar-thumb {
+  background: #4a5568;
+  border-radius: 4px;
+}
+/* Quando o mouse passa por cima da barrinha móvel */
+#loja::-webkit-scrollbar-thumb:hover {
+  background: #63b3ed;
+}
+
+/*BOTOES DE UPGRADE*/
+#btnUranio,#btnSupercondutor,#btnLaser,
+#btnResfriamento,#btnBobina,#btnCriogenico,
+#btnProcessador,#btnInjetor,#btnQuantico {
+  background-color: #2d3748;
+  color: #63b3ed;
+  border: 2px solid #4a5568;
+  border-radius: 8px;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/*HOVER DOS BOTOES*/
+#btnUranio:hover,#btnSupercondutor:hover,#btnLaser:hover,
+#btnResfriamento:hover,#btnBobina:hover,#btnCriogenico:hover,
+#btnProcessador:hover,#btnInjetor:hover,#btnQuantico:hover {
+  border-color: #63b3ed;
+  background-color: #1a365d;
+  box-shadow: 0 0 12px rgba(99, 179, 237, 0.4);
+  transform: translateY(-2px);
+}
+/* DESTACANDO NUMEROS DO CUSTO */
+#custoUranio,#custoSupercondutor,#custoLaser,
+#custoResfriamento,#custoBobina,#custoCriogenico,
+#custoProcessador,#custoInjetor,#custoQuantico {
+  color: #f6e05e;
+  font-weight: bold;
+  font-size: 1.2em;
+}
