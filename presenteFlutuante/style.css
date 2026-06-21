@@ -1,7 +1,7 @@
 .presenteFlutuante {
     position: fixed;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     cursor: pointer;
     z-index: 999;
     animation: flutuar 3s ease-in-out infinite;
@@ -20,10 +20,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 12rem; /* bem grande, tenta entre 8 e 15 */
-    color: rgba(255, 255, 255, 0.06); /* bem transparente, tenta entre 0.05 e 0.15 */
-    z-index: 0; /* atrás de tudo */
+    font-size: 12rem;
+    color: rgba(255, 255, 255, 0.15);
+    text-shadow: 0 0 20px rgba(0, 229, 255, 0.7);
+    z-index: 0;
     font-family: 'Roboto Mono', monospace;
-    pointer-events: none; /* importante! evita que ele "intercepte" cliques */
+    pointer-events: none;
     user-select: none;
 }
