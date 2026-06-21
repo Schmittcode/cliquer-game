@@ -8,6 +8,13 @@
 
 body {
   background-color: #1a1a1a;
+  background-image: url("../assets/backgroundImg.png");
+  background-size: cover;
+  background-size: 120%;
+  background-position-x: 69%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: #e0e0e0;
   font-family: "Roboto Mono", "Share Tech Mono", monospace;
   margin: 0;
