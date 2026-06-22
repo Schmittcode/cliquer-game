@@ -1,7 +1,7 @@
 /*ESTILO DO REATOR*/
 .reator {
-  width: 200px;
-  height: 200px;
+  width: 350px;
+  height: 350px;
   border: none;
   outline: none;
   clip-path: polygon(
@@ -58,13 +58,13 @@
 }
 
 .reator p {
-  font-size: 0.7rem;
+  font-size: 1rem;
   letter-spacing: 0.1rem;
   margin-bottom: 8px;
 }
 
 .reator .valor-pontuacao {
-  font-size: 2rem;
+  font-size: 5rem;
   color: #5ee7ff;
   letter-spacing: 1px;
   text-shadow:0 0 8px rgba(0, 229, 255, 0.6), 0 0 20px rgba(0, 229, 255, 0.3);

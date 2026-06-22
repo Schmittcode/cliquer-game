@@ -32,11 +32,7 @@ function atualizarPontuacao() {
 
 function verificarVitoria() {
   if (pontuacao >= meta) {
-    mensagemEl.textContent = "Meta Concluída!";
-    clearTimeout(timerId);
-    timerId = setTimeout(function () {
-      mensagemEl.textContent = "";
-    }, 4000);
+    mostrarMensagem("Meta Concluída!");
     meta *= 2;
   }
 }
@@ -56,3 +52,11 @@ setInterval(() => {
     verificarVitoria();
   }
 }, 1000);
+
+//ANIMAÇÂO DA MENSAGEM
+function mostrarMensagem(texto) {
+    mensagemEl.textContent = texto;
+    mensagemEl.style.animation = "none";
+    mensagemEl.offsetHeight;
+    mensagemEl.style.animation = "subirSumir 2.5s ease-out forwards"
+}

@@ -29,13 +29,9 @@ btnUranio.addEventListener("click", () => {
     valorPorCliqueEl.textContent = valorPorClique;
     upgradesCompradosEl.textContent = upgradesComprados;
     custoUranioEl.textContent = custoUranio;
-    mensagemEl.textContent = "Haste de Urânio Comprada!";
-    clearTimeout(timerId);
-    timerId = setTimeout(() => { mensagemEl.textContent = ""; }, 2000);
+    mostrarMensagem("Haste de Urânio Comprada!");
   } else {
-    mensagemEl.textContent = "Pontuação Insuficiente";
-    clearTimeout(timerId);
-    timerId = setTimeout(() => { mensagemEl.textContent = ""; }, 2000);
+    mostrarMensagem("Pontuação Insuficiente");
   }
 });
 
@@ -50,13 +46,9 @@ btnSupercondutor.addEventListener("click", () => {
     valorPorSegundoEl.textContent = pontosPorSegundo;
     upgradesCompradosEl.textContent = upgradesComprados;
     custoSupercondutorEl.textContent = custoSupercondutor;
-    mensagemEl.textContent = "Fiação Ativada!";
-    clearTimeout(timerId);
-    timerId = setTimeout(() => { mensagemEl.textContent = ""; }, 2000);
+    mostrarMensagem("Fiação Ativada!");
   } else {
-    mensagemEl.textContent = "Pontuação Insuficiente";
-    clearTimeout(timerId);
-    timerId = setTimeout(() => { mensagemEl.textContent = ""; }, 2000);
+    mostrarMensagem("Pontuação Insuficiente");
   }
 });
 
@@ -71,13 +63,9 @@ btnLaser.addEventListener("click", () => {
     valorPorSegundoEl.textContent = pontosPorSegundo;
     upgradesCompradosEl.textContent = upgradesComprados;
     custoLaserEl.textContent = custoLaser;
-    mensagemEl.textContent = "Laser de Fusão Ativado!";
-    clearTimeout(timerId);
-    timerId = setTimeout(() => { mensagemEl.textContent = ""; }, 2000);
+    mostrarMensagem("Laser de Fusão Ativado!");
   } else {
-    mensagemEl.textContent = "Pontuação Insuficiente";
-    clearTimeout(timerId);
-    timerId = setTimeout(() => { mensagemEl.textContent = ""; }, 2000);
+    mostrarMensagem("Pontuação Insuficiente");
   }
 });
 
@@ -92,13 +80,9 @@ btnResfriamento.addEventListener("click", () => {
     valorPorSegundoEl.textContent = pontosPorSegundo;
     upgradesCompradosEl.textContent = upgradesComprados;
     custoResfriamentoEl.textContent = custoResfriamento;
-    mensagemEl.textContent = "Resfriamento Heavy Water Ativado!";
-    clearTimeout(timerId);
-    timerId = setTimeout(() => { mensagemEl.textContent = ""; }, 2000);
+    mostrarMensagem("Resfriamento Heavy Water Ativado!");
   } else {
-    mensagemEl.textContent = "Pontuação Insuficiente";
-    clearTimeout(timerId);
-    timerId = setTimeout(() => { mensagemEl.textContent = ""; }, 2000);
+    mostrarMensagem("Pontuação Insuficiente");
   }
 });
 
@@ -113,13 +97,9 @@ btnBobina.addEventListener("click", () => {
     valorPorSegundoEl.textContent = pontosPorSegundo;
     upgradesCompradosEl.textContent = upgradesComprados;
     custoBobinaEl.textContent = custoBobina;
-    mensagemEl.textContent = "Bobina de Contenção Ativada!";
-    clearTimeout(timerId);
-    timerId = setTimeout(() => { mensagemEl.textContent = ""; }, 2000);
+    mostrarMensagem("Bobina de Contenção Ativada!");
   } else {
-    mensagemEl.textContent = "Pontuação Insuficiente";
-    clearTimeout(timerId);
-    timerId = setTimeout(() => { mensagemEl.textContent = ""; }, 2000);
+    mostrarMensagem("Pontuação Insuficiente");
   }
 });
 
@@ -134,13 +114,9 @@ btnCriogenico.addEventListener("click", () => {
     valorPorSegundoEl.textContent = pontosPorSegundo;
     upgradesCompradosEl.textContent = upgradesComprados;
     custoCriogenicoEl.textContent = custoCriogenico;
-    mensagemEl.textContent = "Criogênio Ativado!";
-    clearTimeout(timerId);
-    timerId = setTimeout(() => { mensagemEl.textContent = ""; }, 2000);
+    mostrarMensagem("Criogênio Ativado!");
   } else {
-    mensagemEl.textContent = "Pontuação Insuficiente";
-    clearTimeout(timerId);
-    timerId = setTimeout(() => { mensagemEl.textContent = ""; }, 2000);
+    mostrarMensagem("Pontuação Insuficiente");
   }
 });
 
@@ -155,13 +131,9 @@ btnProcessador.addEventListener("click", () => {
     valorPorSegundoEl.textContent = pontosPorSegundo;
     upgradesCompradosEl.textContent = upgradesComprados;
     custoProcessadorEl.textContent = custoProcessador;
-    mensagemEl.textContent = "Processador Quântico Ativado!";
-    clearTimeout(timerId);
-    timerId = setTimeout(() => { mensagemEl.textContent = ""; }, 2000);
+    mostrarMensagem("Processador Quântico Ativado!");
   } else {
-    mensagemEl.textContent = "Pontuação Insuficiente";
-    clearTimeout(timerId);
-    timerId = setTimeout(() => { mensagemEl.textContent = ""; }, 2000);
+    mostrarMensagem("Pontuação Insuficiente");
   }
 });
 
@@ -176,13 +148,9 @@ btnInjetor.addEventListener("click", () => {
     valorPorCliqueEl.textContent = valorPorClique;
     upgradesCompradosEl.textContent = upgradesComprados;
     custoInjetorEl.textContent = custoInjetor;
-    mensagemEl.textContent = "Injetor de Antimatéria Ativado!";
-    clearTimeout(timerId);
-    timerId = setTimeout(() => { mensagemEl.textContent = ""; }, 2000);
+    mostrarMensagem("Injetor de Antimatéria Ativado!");
   } else {
-    mensagemEl.textContent = "Pontuação Insuficiente";
-    clearTimeout(timerId);
-    timerId = setTimeout(() => { mensagemEl.textContent = ""; }, 2000);
+    mostrarMensagem("Pontuação Insuficiente");
   }
 });
 
@@ -197,12 +165,7 @@ btnQuantico.addEventListener("click", () => {
     valorPorSegundoEl.textContent = pontosPorSegundo;
     upgradesCompradosEl.textContent = upgradesComprados;
     custoQuanticoEl.textContent = custoQuantico;
-    mensagemEl.textContent = "Algoritmo Quântico Ativado!";
-    clearTimeout(timerId);
-    timerId = setTimeout(() => { mensagemEl.textContent = ""; }, 2000);
+    mostrarMensagem("Algoritmo Quântico Ativado!");
   } else {
-    mensagemEl.textContent = "Pontuação Insuficiente";
-    clearTimeout(timerId);
-    timerId = setTimeout(() => { mensagemEl.textContent = ""; }, 2000);
-  }
-});
+    mostrarMensagem("Pontuação Insuficiente");
+}});
