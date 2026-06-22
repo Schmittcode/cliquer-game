@@ -1,0 +1,74 @@
+/* ESTILOS DO POPUP DE META */
+#popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Escondido por padrão */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Classe que o JS vai injetar para mostrar o popup */
+#popupOverlay.mostrar {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#popupMeta {
+  background-color: #111418;
+  border: 2px solid #5ee7ff;
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 450px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.3);
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+#popupOverlay.mostrar #popupMeta {
+  transform: scale(1);
+}
+
+#popupMeta h2 {
+  color: #5ee7ff;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  text-shadow: 0 0 10px rgba(94, 231, 255, 0.5);
+}
+
+#popupMeta p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+#btnFecharPopup {
+  background-color: #2d3748;
+  color: #e0e0e0;
+  border: 2px solid #5ee7ff;
+  border-radius: 6px;
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  font-family: inherit;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.2s ease;
+}
+
+#btnFecharPopup:hover {
+  background-color: #1a365d;
+  color: #5ee7ff;
+  box-shadow: 0 0 15px rgba(94, 231, 255, 0.4);
+}

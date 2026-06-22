@@ -4,17 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jogo de Clique</title>
-    <link rel="shortcut icon" href="assets/presente.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/style.css"/>
-    <link rel="stylesheet" href="./css/reator.css"/>
-    <link rel="stylesheet" href="./css/loja.css"/>
-    <link rel="stylesheet" href="./css/status.css"/>
-    <link rel="stylesheet" href="./css/responsive.css"/>
-    <link rel="stylesheet" href="presenteFlutuante/style.css"/>
+    <link rel="shortcut icon" href="assets/presente.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/reator.css" />
+    <link rel="stylesheet" href="./css/loja.css" />
+    <link rel="stylesheet" href="./css/status.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="presenteFlutuante/style.css" />
+    <link rel="stylesheet" href="./css/status.css" />
+    <link rel="stylesheet" href="./css/meta1.css" />
+    <link rel="stylesheet" href="./css/barra.css" />
   </head>
   <body>
     <div id="background"></div>
-    <h1>NuclearCLiquer!</h1>
+    <h1 id="tituloJogo">NuclearCliquer</h1>
 
     <div class="layout">
       <div id="status">
@@ -23,12 +26,19 @@
         <p>UPGRADES COMPRADOS: <span id="upgrades">0</span></p>
         <p>ENERGIA POR SEGUNDO: <span id="valorPorSegundo">0</span></p>
       </div>
+      <button id="btn-audio" class="mutar-btn">MÚSICA: LIGADA</button>
+      <div class="painel-central">
+        <div class="reator-borda">
+          <button class="reator" id="botaoClique">
+            <p>REATOR NODE</p>
+            <span class="valor-pontuacao">0</span>
+          </button>
+        </div>
 
-      <div class="reator-borda">
-        <button class="reator" id="botaoClique">
-          <p>REATOR NODE</p>
-          <span class="valor-pontuacao">0</span>
-        </button>
+        <div class="barra-container">
+          <div id="barraProgresso"></div>
+          <span id="textoBarra">NÍVEL DE ENERGIA: 0%</span>
+        </div>
       </div>
 
       <div id="loja">
@@ -82,8 +92,23 @@
     <p id="mensagem"></p>
     <div id="indicadorBuff"></div>
 
+    <div id="popupOverlay">
+      <div id="popupMeta">
+        <h2>PARABÉNS!</h2>
+        <p>
+          Você atingiu sua primeira meta de <strong>500 pontos</strong> de
+          energia!
+        </p>
+        <p>O reator está estabilizado. Continue gerando mais poder!</p>
+        <button id="btnFecharPopup">Continuar</button>
+      </div>
+    </div>
+
     <script src="./js/script.js"></script>
     <script src="./js/upgrades.js"></script>
+    <script src="./js/metas.js"></script>
+    <script src="./js/barra.js"></script>
+    <script src="./js/audio.js"></script>
     <script src="presenteFlutuante/presente.js"></script>
   </body>
 </html>

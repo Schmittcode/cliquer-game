@@ -1,0 +1,79 @@
+/* CONTAINER CENTRAL - Força o reator e a barra a ficarem um embaixo do outro */
+.painel-central {
+  display: flex !important;
+  flex-direction: column !important; /* Força o alinhamento vertical (em cima e embaixo) */
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 15px !important; /* Distância exata entre o reator e a barra */
+  margin: 0 30px !important;
+}
+
+/* Remove e corrige as margens antigas que jogavam os elementos para o lado */
+.painel-central .reator-borda {
+  margin: 0 !important;
+}
+
+/* CONTAINER DA BARRA DE PROGRESSO */
+.barra-container {
+  display: block !important;
+  width: 350px;
+  height: 26px;
+  background-color: #111418;
+  border: 2px solid #5ee7ff;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.1);
+}
+
+/* A BARRA ENCHENDO (PADRÃO CIANO) */
+#barraProgresso {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00b4d8, #5ee7ff);
+  transition: width 0.1s ease-out;
+}
+
+/* TEXTO POR CIMA DA BARRA */
+#textoBarra {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Share Tech Mono", monospace;
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px #000;
+  pointer-events: none;
+  width: 100%;
+  text-align: center;
+}
+
+/* ANIMAÇÃO DE ALERTA QUANDO ENCHER */
+@keyframes pulsoAlerta {
+  0% {
+    background-color: #ff3333;
+    box-shadow: 0 0 15px #ff3333;
+  }
+  50% {
+    background-color: #ff9900;
+    box-shadow: 0 0 25px #ff9900;
+  }
+  100% {
+    background-color: #ff3333;
+    box-shadow: 0 0 15px #ff3333;
+  }
+}
+
+/* CLASSE DE SOBRECARGA ATIVA */
+.barra-container.sobrecarga-ativa {
+  border-color: #ff3333;
+}
+
+.barra-container.sobrecarga-ativa #barraProgresso {
+  background: #ff3333;
+  animation: pulsoAlerta 0.8s infinite alternate;
+  transition: width 1s linear;
+}
