@@ -22,7 +22,9 @@
   cursor: pointer;
   color: #e0e0e0;
   font-family: "Share Tech Mono", monospace;
-  transition: transform 0.05s ease, background-color 0.2s ease;
+  transition:
+    transform 0.05s ease,
+    background-color 0.2s ease;
 }
 
 .reator:active {
@@ -43,7 +45,9 @@
     0% 70%,
     0% 30%
   );
-  transition: filter 0.1s ease, transform 0.05s ease;
+  transition:
+    filter 0.1s ease,
+    transform 0.05s ease;
   margin: 30px;
 }
 
@@ -67,6 +71,8 @@
   font-size: 5rem;
   color: #5ee7ff;
   letter-spacing: 1px;
-  text-shadow:0 0 8px rgba(0, 229, 255, 0.6), 0 0 20px rgba(0, 229, 255, 0.3);
+  text-shadow:
+    0 0 8px rgba(0, 229, 255, 0.6),
+    0 0 20px rgba(0, 229, 255, 0.3);
   margin-bottom: 8px;
 }
