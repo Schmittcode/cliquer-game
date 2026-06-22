@@ -1,43 +1,68 @@
 @media (max-width: 768px) {
-    .layout {
-        padding-bottom: 0;
-        margin-bottom: 0;
-    }
+  .layout {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 
-    .layout {
-        flex-direction: column; /* Empilha Reator e Loja na vertical */
-        align-items: center;    /* Centraliza tudo no meio da tela */
-    }
+  .layout {
+    flex-direction: column; /* Empilha Reator e Loja na vertical */
+    align-items: center; /* Centraliza tudo no meio da tela */
+  }
 
-    #loja {
-        width: 100%;
-        max-width: 100%;
-        max-height: 265px;     /* Limita o tamanho da loja para não quebrar o layout */
-        overflow-y: auto;      /* Cria o scroll interno na loja automaticamente se precisar */
-        margin-bottom: 0;
-    }
+  #loja {
+    width: 100%;
+    max-width: 100%;
+    max-height: 265px; /* Limita o tamanho da loja para não quebrar o layout */
+    overflow-y: auto; /* Cria o scroll interno na loja automaticamente se precisar */
+    margin-bottom: 0;
+  }
 
-    .reator {
-        width: 200px;          /* Tamanho perfeito para clicar com o dedão */
-        height: 200px;
-    }
+  .reator {
+    width: 200px; /* Tamanho perfeito para clicar com o dedão */
+    height: 200px;
+  }
 
-    .reator-borda {
-        margin: 20px 0;        /* Cria um espaço seguro acima e abaixo do reator */
-    }
+  .reator-borda {
+    margin: 20px 0; /* Cria um espaço seguro acima e abaixo do reator */
+  }
 
-    #status {
-        margin-top: 30px;
-        width: 100%;           /* Faz o painel de status ocupar toda a largura no celular */
-        box-sizing: border-box; /* Garante que o padding não faça o status passar da tela */
-    }
+  #status {
+    margin-top: 30px;
+    width: 100%; /* Faz o painel de status ocupar toda a largura no celular */
+    box-sizing: border-box; /* Garante que o padding não faça o status passar da tela */
+  }
 
-    #background {
-        transform: rotate(90deg);
-        transform-origin: center center;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-    }
+  #background {
+    transform: rotate(90deg);
+    transform-origin: center center;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+  }
+}
+
+/* MONITORAMENTO DE TELAS MENORES (SMARTPHONES E TABLETS) */
+@media (max-width: 768px) {
+  .cabecalho-jogo {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  #titulo-jogo {
+    font-size: 1.8rem !important; /* Diminui o tamanho do texto no celular */
+    letter-spacing: 2px !important; /* Aproxima um pouco as letras */
+  }
+
+  .mutar-btn {
+    font-size: 11px !important; /* Diminui o botão para economizar espaço */
+    padding: 4px 10px !important;
+  }
+}
+
+/* PARA CELULARES MUITO PEQUENOS */
+@media (max-width: 480px) {
+  #titulo-jogo {
+    font-size: 1.4rem !important;
+  }
 }
